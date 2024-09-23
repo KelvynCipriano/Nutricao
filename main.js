@@ -1,12 +1,11 @@
-alert("Banana");
-console.log("banana");
-
-var titulo = document.querySelector("h1");
+var titulo = document.querySelector(".titulo");
 titulo.textContent = "Banana Nutrição";
 console.log(titulo);
 
-var trPaulo = document.querySelector("#paulo");
-console.log(trPaulo);
+var paciente = document.querySelector("#primeiro-paciente");
 
-var tdPeso = trPaulo.querySelector(".info-peso");
-tdPeso.textContent = "150";
+var tdPeso = paciente.querySelector(".info-peso");
+var peso = tdPeso.textContent;
+
+var tdAltura = paciente.querySelector(".info-altura");
+var altura = tdAltura.textContent;
