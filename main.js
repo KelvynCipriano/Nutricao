@@ -2,15 +2,25 @@ var titulo = document.querySelector(".titulo");
 titulo.textContent = "Banana Nutrição";
 console.log(titulo);
 
-var paciente = document.querySelector("#primeiro-paciente");
+var paciente = document.querySelectorAll(".paciente");
 
-var tdPeso = paciente.querySelector(".info-peso");
+for(var i = 0; i < 5; i++) {
+console.log(pacientes[i]);
+}
+
+var tdPeso = pacientes[i].querySelector(".info-peso");
 var peso = tdPeso.textContent;
 
-var tdAltura = paciente.querySelector(".info-altura");
+var tdAltura = pacientes[i].querySelector(".info-altura");
 var altura = tdAltura.textContent;
 
-var tdImc = paciente.querySelector(".info_imc");
+var tdImc = pacientes[i].querySelector(".info_imc");
+
+var pesoEhValido = true;
+var alturaEhValido = true;
+
+
+
 var imc = peso / (altura * altura);
 
 tdImc.textContent = imc;
