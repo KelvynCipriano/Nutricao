@@ -35,6 +35,12 @@ if(altura < 0 || altura > 2.80) {
 }
 
 if (pesoEhValido && alturaEhValida) {
- var imc = peso / (altura * altura);
+ var imc = calculaimc (peso, altura);
   tdImc.textContent = imc.toFixed(2);
+}
+
+function calculaimc(peso, altura){
+var imc = 0
+imc = peso / (altura * altura);
+return imc;
 }
