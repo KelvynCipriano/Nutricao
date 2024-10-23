@@ -42,5 +42,5 @@ if (pesoEhValido && alturaEhValida) {
 function calculaimc(peso, altura){
 var imc = 0
 imc = peso / (altura * altura);
-return imc;
+return toFixed(2);
 }
