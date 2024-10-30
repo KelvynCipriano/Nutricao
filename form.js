@@ -17,6 +17,7 @@ var paciente = obtemPacienteDoFormulario(form);
   var tabela = document.querySelector("#tabela-pacientes");
 
   tabela.appendChild(pacienteTr);
+  form.reset();
 });
 
 function obtemPacienteDoFormulario(form) {
