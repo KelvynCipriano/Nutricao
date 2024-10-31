@@ -13,7 +13,8 @@ var paciente = obtemPacienteDoFormulario(form);
   var pacienteTr = montaTr(paciente);
 
 if(!validaPaciente(paciente)){
-console.log("Paciente Inválido");
+var pesoInvalido = document.querySelector ("mensagem de erro");
+pesoInvalido.textContent = "O peso está invalido";
 return;
 }
 
