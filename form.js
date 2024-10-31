@@ -12,6 +12,11 @@ var paciente = obtemPacienteDoFormulario(form);
  //Criando a linha e as células da tabela do novo paciente
   var pacienteTr = montaTr(paciente);
 
+if(!validaPaciente(paciente)){
+console.log("Paciente Inválido");
+return;
+}
+
 
   //Aqui adicionamos a linha com todos os seus dados na tabela do "HTML";
   var tabela = document.querySelector("#tabela-pacientes");
@@ -54,4 +59,12 @@ td.textContent = dado
 td.classList.add(classe);
 
 return td;
+}
+
+function validaPaciente(paciente){
+if(validaPeso(paciente.peso)){
+return true;
+}else(
+return false;
+}
 }
