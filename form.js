@@ -12,10 +12,10 @@ var paciente = obtemPacienteDoFormulario(form);
  //Criando a linha e as células da tabela do novo paciente
   var pacienteTr = montaTr(paciente);
 
-if(!validaPaciente(paciente)){
-var pesoInvalido = document.querySelector ("mensagem de erro");
-pesoInvalido.textContent = "O peso está invalido";
-return;
+var erro = validaPaciente(paciente);
+if(erro.legth > 0){
+var mensagemErro = document.querySelector ("mensagem de erro");
+mesagemErro.textContent = erro;
 }
 
 
@@ -64,8 +64,8 @@ return td;
 
 function validaPaciente(paciente){
 if(validaPeso(paciente.peso)){
-return true;
+return "";
 }else(
-return false;
+return "peso Invalido!";
 }
 }
