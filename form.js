@@ -12,10 +12,11 @@ var paciente = obtemPacienteDoFormulario(form);
  //Criando a linha e as células da tabela do novo paciente
   var pacienteTr = montaTr(paciente);
 
-var erro = validaPaciente(paciente);
-if(erro.legth > 0){
-var mensagemErro = document.querySelector ("mensagem de erro");
-mesagemErro.textContent = erro;
+var erros = validaPaciente(paciente);
+
+if(erros.legth > 0){
+exibeErros(erros);
+return;
 }
 
 
@@ -25,6 +26,12 @@ mesagemErro.textContent = erro;
   tabela.appendChild(pacienteTr);
   form.reset();
 });
+
+function exibeErros(erros){
+var u1 = document.querySelector();
+
+}
+
 
 function obtemPacienteDoFormulario(form) {
 
@@ -63,14 +70,10 @@ return td;
 }
 
 function validaPaciente(paciente){
-if(validaPeso(paciente.peso)){
-return "";
-}else(
-return "peso Invalido!";
+var erros = []
+
+if(!validaPeso(paciente.peso)){
+erros.push("Peso Invalido!")
 }
 
-if(validaAltura(paciente.altura)){
-return "";
-}else {
-return "Altura Inválida!";
 }
