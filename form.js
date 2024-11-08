@@ -68,4 +68,9 @@ return "";
 }else(
 return "peso Invalido!";
 }
+
+if(validaAltura(paciente.altura)){
+return "";
+}else {
+return "Altura Inválida!";
 }
