@@ -30,7 +30,7 @@ return;
 function exibeErros(erros){
 var ul = document.querySelector("mensagem-erro");
 erros.forEach(function(erro){
-var li = createElement("li");
+var li = document.createElement("li");
 li.textContent = erro;
 ul.appendChild(li);
 });
