@@ -28,8 +28,12 @@ return;
 });
 
 function exibeErros(erros){
-var u1 = document.querySelector();
-
+var ul = document.querySelector("mensagem-erro");
+erros.forEach(function(erro){
+var li = createElement("li");
+li.textContent = erro;
+ul.appendChild(li);
+});
 }
 
 
@@ -75,5 +79,5 @@ var erros = []
 if(!validaPeso(paciente.peso)){
 erros.push("Peso Invalido!")
 }
-
+return erros;
 }
